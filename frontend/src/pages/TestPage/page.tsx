@@ -1,5 +1,4 @@
-import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import type { Route } from "./+types/page";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -8,6 +7,6 @@ export function meta({}: Route.MetaArgs) {
   ];
 }
 
-export default function Home() {
-  return <Welcome />;
+export default function Page() {
+  return <h1>Test new page in React Router v7!</h1>
 }

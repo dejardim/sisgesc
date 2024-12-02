@@ -1,5 +1,5 @@
 {
-  "name": "router-sisgesc",
+  "name": "frontend",
   "private": true,
   "type": "module",
   "scripts": {
@@ -17,6 +17,7 @@
     "react-router": "^7.0.1"
   },
   "devDependencies": {
+    "@playwright/test": "^1.49.0",
     "@react-router/dev": "^7.0.1",
     "@types/node": "^20",
     "@types/react": "^18.3.12",
