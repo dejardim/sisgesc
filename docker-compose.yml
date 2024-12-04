@@ -1,0 +1,38 @@
+version: '3.5'
+
+services:
+  frontend:
+    build:
+      dockerfile: frontend/Dockerfile
+      context: .
+    volumes:
+      - .:/app/
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+
+  db:
+    image: "postgres:16-alpine"
+    environment:
+      - POSTGRES_USER={{project_name}}
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB={{project_name}}
+    ports:
+      - "5432"
+    volumes:
+      - dbdata:/var/lib/postgresql/data:delegated
+
+  backend:
+    build:
+      dockerfile: backend/Dockerfile
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/home/user/app/
+    depends_on:
+      - db
+      - frontend
+
+volumes:
+  dbdata:

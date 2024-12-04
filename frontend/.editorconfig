@@ -3,7 +3,7 @@
 # top-most EditorConfig file
 root = false
 
-# Configurações globais
+# Global settings
 [*]
 end_of_line = lf
 charset = utf-8
@@ -11,11 +11,8 @@ max_line_length = 100
 trim_trailing_whitespace = false
 insert_final_newline = true
 
-# Configurações específicas para arquivos Python
-[*.py]
+# JavaScript, TypeScript, and ReactJS settings
+[*.{js,ts,jsx,tsx}]
 indent_style = space
-indent_size = 4
-
-# Configurações específicas para Makefiles
-[Makefile]
-indent_style = tab
+indent_size = 2
+quote_type = double
