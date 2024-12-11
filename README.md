@@ -94,6 +94,8 @@ sisgest/
 
 ## Quick Start
 
+Please refer to the `BUILD.md` for a most detailed guide.
+
 ### Prerequisites
 
 Ensure you have the following installed:
