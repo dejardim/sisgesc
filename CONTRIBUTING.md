@@ -1,8 +1,8 @@
 ---
 
-# Contributing to Sisgest
+# Contributing to Sisgesc
 
-Welcome to the Sisgest project! This document outlines our guidelines for internal collaboration. Please review it to ensure smooth development and consistency across our codebase.
+Welcome to the Sisgesc project! This document outlines our guidelines for internal collaboration. Please review it to ensure smooth development and consistency across our codebase.
 
 ## Table of Contents
 
@@ -41,7 +41,7 @@ Ensure you have the following installed:
 
 ```bash
 git clone https://internal-repo-url.git
-cd sisgest
+cd sisgesc
 ```
 
 ### Install Dependencies
@@ -65,7 +65,7 @@ pip install -r requirements.txt
 ## Project Structure
 
 ```
-sisgest/
+sisgesc/
 ├── frontend/       # React/Vue.js/Angular application
 ├── backend/        # Node.js/Express/Django/FastAPI server
 ├── docs/           # Documentation and design specifications
@@ -190,5 +190,5 @@ body (optional)
 
 ---
 
-Thank you for contributing to Sisgest! Your effort helps us build a robust and efficient school management system.
+Thank you for contributing to Sisgesc! Your effort helps us build a robust and efficient school management system.
 
