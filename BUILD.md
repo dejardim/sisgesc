@@ -1,6 +1,6 @@
-# Build Instructions for Sisgest
+# Build Instructions for Sisgesc
 
-This document provides detailed instructions on how to build and run Sisgest, the school management system, both for development and production environments. Please follow these steps carefully to ensure a smooth setup.
+This document provides detailed instructions on how to build and run Sisgesc, the school management system, both for development and production environments. Please follow these steps carefully to ensure a smooth setup.
 
 ---
 
@@ -18,7 +18,7 @@ This document provides detailed instructions on how to build and run Sisgest, th
 
 ## Prerequisites
 
-Before building Sisgest, make sure you have the following tools installed on your machine:
+Before building Sisgesc, make sure you have the following tools installed on your machine:
 
 - **Node.js** (Latest LTS version)
 - **NPM** or **Yarn** (for frontend dependencies)
@@ -45,7 +45,7 @@ docker --version
 
 ```bash
 git clone https://internal-repo-url.git
-cd sisgest
+cd sisgesc
 ```
 
 ### Install Dependencies
@@ -175,7 +175,7 @@ Create a `.env` file in the `backend` and `frontend` directories with the follow
 ### Backend `.env` Example
 
 ```
-DATABASE_URL=postgresql://username:password@localhost:5432/sisgest_db
+DATABASE_URL=postgresql://username:password@localhost:5432/sisgesc_db
 SECRET_KEY=your-secret-key
 DEBUG=True
 ```
