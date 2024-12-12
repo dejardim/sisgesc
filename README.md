@@ -1,8 +1,8 @@
-# Sisgest: School Management System
+# Sisgesc: School Management System
 
 ## Introduction
 
-**Sisgest** is a comprehensive web application designed to streamline and modernize school management processes. From student enrollment to financial operations, Sisgest aims to centralize data, ensure security, and provide an intuitive interface for users with varying technical expertise. This system addresses the challenges of outdated or fragmented methods, offering efficiency, security, and accessibility.
+**Sisgesc** is a comprehensive web application designed to streamline and modernize school management processes. From student enrollment to financial operations, Sisgesc aims to centralize data, ensure security, and provide an intuitive interface for users with varying technical expertise. This system addresses the challenges of outdated or fragmented methods, offering efficiency, security, and accessibility.
 
 ## Motivation
 
@@ -12,7 +12,7 @@ Many schools face challenges in managing large volumes of information using manu
 - Lack of transparency in financial operations.
 - Inconsistent or inaccessible information for stakeholders (e.g., administrators, secretaries, and financial officers).
 
-Sisgest was conceived to solve these issues, particularly based on the needs of primary users like **Ms. Janaína** and other stakeholders. The system aims to provide:
+Sisgesc was conceived to solve these issues, particularly based on the needs of primary users like **Ms. Janaína** and other stakeholders. The system aims to provide:
 
 - **Efficiency:** Automating administrative tasks.
 - **Security:** Protecting sensitive data.
@@ -76,7 +76,7 @@ Sisgest was conceived to solve these issues, particularly based on the needs of 
 ## Project Structure
 
 ```plaintext
-sisgest/
+sisgesc/
 ├── frontend/        # Frontend code (React/Vue)
 │   └── src/
 │       ├── components/
@@ -110,7 +110,7 @@ Ensure you have the following installed:
 1. **Clone the Repository:**
    ```bash
    git clone https://internal-repo-url.git
-   cd sisgest
+   cd sisgesc
    ```
 
 2. **Install Frontend Dependencies:**
@@ -150,8 +150,8 @@ Access the application at `http://localhost:3000`.
 
 ## Contributing
 
-Please refer to the `CONTRIBUTING.md` for guidelines on contributing to Sisgest.
+Please refer to the `CONTRIBUTING.md` for guidelines on contributing to Sisgesc.
 
 ---
 
-**Sisgest** © 2024. All rights reserved.
+**Sisgesc** © 2024. All rights reserved.
