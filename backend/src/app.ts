@@ -1,40 +1,35 @@
-/* eslint-disable quotes */
-import 'reflect-metadata'; // this shim is required
 import express from 'express';
-import {
-  useContainer,
-  useExpressServer,
-  getMetadataArgsStorage
-} from 'routing-controllers';
-import { Container } from 'typedi';
-import { AuthorizationService } from '@services/auth.service';
-import { middlewares } from '@middlewares';
-import { controllers } from '@controllers';
-import { swaggerSpec } from './swagger';
-import { DOCS_ENABLED } from '@config';
+import cors from 'cors';
+import helmet from 'helmet';
+import bodyParser from 'body-parser';
+import morgan from 'morgan';
 
-// required by routing-controllers
-useContainer(Container);
+import 'reflect-metadata';
+import { AppDataSource } from './database/app-data-source';
+import { CORS_WHITELIST } from './config/env';
 
-// Create express server
-const app: express.Express = express();
+import enrollmentRouter from './routers/enrollments';
 
-const routingControllersOptions: any = {
-  routePrefix: '/api/v1',
-  defaultErrorHandler: false,
-  cors: true,
-  authorizationChecker: AuthorizationService.getInstance().authorizationChecker,
-  controllers,
-  middlewares,
-  interceptors: []
+export const createExpressApp = async () => {
+  try {
+    await AppDataSource.initialize();
+    console.log('Database connected successfully');
+  } catch (error) {
+    console.error('Database connection error:', error);
+    process.exit(1);
+  }
+
+  const app = express();
+
+  const whitelist = CORS_WHITELIST?.split(',') || [];
+  const corsOptions = { origin: whitelist };
+  app.use(cors(corsOptions));
+
+  app.use(morgan('combined'));
+  app.use(bodyParser.json());
+  app.use(helmet());
+
+  app.use('/api/enrollments', enrollmentRouter);
+
+  return app;
 };
-
-// Wrap server with routing-controllers
-useExpressServer(app, routingControllersOptions);
-
-// Setup Swagger
-if (DOCS_ENABLED === 'true') {
-  swaggerSpec(getMetadataArgsStorage, routingControllersOptions, app);
-}
-
-export default app;
